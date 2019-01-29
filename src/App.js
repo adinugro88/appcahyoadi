@@ -3,13 +3,17 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  state = {
+    name:'data'
+  }
   render() {
+    
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            asdasd <code>src/App.js</code> and save to reload.
+            {this.state.name} <code>src/App.js</code> and save to reload.
           </p>
         
           <a
