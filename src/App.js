@@ -13,16 +13,15 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            {this.state.name} <code>src/App.js</code> and save to reload.
+            Coming Soon React Program with PostgreSQL
           </p>
         
           <a
             className="App-link"
-            href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+           Welcome To the Jungle 
           </a>
         </header>
       </div>
