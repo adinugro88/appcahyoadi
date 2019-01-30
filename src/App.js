@@ -22,7 +22,10 @@ class App extends Component {
 
   deleteNinja = (id)=>{
     console.log(id)
-
+    let ninjas = this.state.ninjas.filter(ninja=>{
+      return ninja.id !== id 
+    
+    })
   }
 
 
