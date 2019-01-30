@@ -1,29 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Ninjas from './Ninjas';
+import AddNinja from './AddNinja';
 
 class App extends Component {
   state = {
-    name:'data'
+    ninjas: [
+      { name: 'Ryu', age: 30, belt: 'black', id: 1 },
+      { name: 'Yoshi', age: 20, belt: 'green', id: 2 },
+      { name: 'Crystal', age: 25, belt: 'pink', id: 3 }
+    ]
   }
+
+  addNinja = (ninja) => {
+   
+    ninja.id = Math.random();
+    let ninjas = [...this.state.ninjas, ninja];
+    this.setState({
+      ninjas : ninjas
+    })  
+  } 
+
+  deleteNinja = (id)=>{
+    console.log(id)
+
+  }
+
+
   render() {
-    
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Coming Soon React Program with PostgreSQL
-          </p>
-        
-          <a
-            className="App-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-           Welcome To the Jungle 
-          </a>
-        </header>
+        <h1>My first React app</h1>
+        <Ninjas deleteNinja={this.deleteNinja} ninjas={this.state.ninjas}/>
+        <br/>
+        <AddNinja addNinja={this.addNinja}/>
       </div>
     );
   }
